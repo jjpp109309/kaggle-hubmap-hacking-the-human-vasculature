@@ -15,9 +15,13 @@ def get_project_level()-> str:
 
     raise EOFError('No parent project directory found')
 
+
 PROJECT_LEVEL = get_project_level()
+
 
 paths: Dict[str,str] = {
     'train': os.path.join(PROJECT_LEVEL, 'data', 'train'),
-    'test': os.path.join(PROJECT_LEVEL,'data', 'test') 
+    'test': os.path.join(PROJECT_LEVEL,'data', 'test'),
+    'home': os.path.join(PROJECT_LEVEL),
+    'polygons': os.path.join(PROJECT_LEVEL, 'data', 'polygons.jsonl')
 }
